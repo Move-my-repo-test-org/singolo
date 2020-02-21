@@ -4,8 +4,16 @@
 }
 
 body {
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper {
+  width: 1020px;
+
   font-family: Lato, sans-serif;
 }
+
 
 header {
   display: flex;
@@ -28,18 +36,16 @@ header {
   padding: 0 40px;
 
   color: #ffffff;
-
-
 }
 
 h1 {
   position: relative;
   bottom: 4px;
+
   font-size: 25px;
   letter-spacing: -0.02em;
   line-height: 6.32px;
-  font-weight: 400;
-  
+  font-weight: 400; 
 }
 
 .logo span {
@@ -50,7 +56,6 @@ nav a {
   font-size: 12px;
   text-transform: uppercase;
   text-decoration: none;
-  /* letter-spacing: 0.035em; */
   color: #ffffff;
 }
 
@@ -70,4 +75,39 @@ nav a::after {
 
 #last-item::after {
   content: none;
+}
+
+.slider {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  height: 600px;
+  padding: 0 40px 6px 40px;
+
+  background-image: url(assets/slider-bg.png);
+  background-color: #f06c64;
+}
+
+#iPhone-vert {
+  position: relative;
+  right: 5px;
+  bottom: 3px;
+}
+
+#iPhone-hor {
+  position: relative;
+  left: 6px;
+  bottom: 3px;
+}
+
+#arrow-left {
+  position: relative;
+  left: 2px;
+  bottom: 1px;
+}
+
+#arrow-right {
+  position: relative;
+  bottom: 1px;
 }
