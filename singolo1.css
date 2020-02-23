@@ -11,7 +11,7 @@ body {
 .wrapper {
   width: 1020px;
 
-  font-family: Lato, sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
 
@@ -46,6 +46,7 @@ h1 {
   letter-spacing: -0.02em;
   line-height: 6.32px;
   font-weight: 400; 
+  font-stretch: extra-condensed;
 }
 
 .logo span {
@@ -111,3 +112,62 @@ nav a::after {
   position: relative;
   bottom: 1px;
 }
+
+.services {
+  background-image: url(assets/services-bg.png);
+  height: 501px;
+  box-sizing: border-box;
+  padding: 59px 40px;
+}
+
+.services-title {
+  font-size: 30px;
+  letter-spacing: 0.005em;
+  color: #666d89;
+  font-stretch: semi-condensed;
+}
+
+.services-description {
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: -0.003em;
+  text-align: justify;
+  line-height: 30px;
+  color: #767e9e;
+  margin-top: 18px;
+}
+
+.cards-block {
+  display: grid;
+  grid-template-columns: 300px 300px 300px;
+  justify-content: space-between;
+  padding-top: 43px;
+  padding-left: 1px;
+}
+
+.services-card {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 26px;
+}
+
+.card-icon {
+  margin-right: 20px;
+  align-self: flex-start;
+  padding-top: 4px;
+}
+
+.card-title {
+  font-size: 18px;
+  color: #666d89;
+  padding-bottom: 9px;
+  font-stretch: semi-condensed;
+}
+
+.card-description {
+  font-size: 12px;
+  color: #767e9e;
+  line-height: 22px;
+  text-align: justify;
+}
+
