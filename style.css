@@ -175,6 +175,9 @@ nav a::after {
   text-align: justify;
 }
 
+.third-column {
+  padding-left: 2px;
+}
 
 .portfolio {
   height: 869px;
@@ -279,6 +282,11 @@ nav a::after {
   max-width: 300px;
 }
 
+.second-profile-photo {
+  position: relative;
+  left: -1px;
+}
+
 .profile-name {
   font-size: 18px;
   color: #666d89;
@@ -369,6 +377,7 @@ nav a::after {
 textarea {
   height: 202px;
   padding-top: 11px;
+  resize: none;
 }
 
 .form-field::-webkit-input-placeholder {
