@@ -81,23 +81,23 @@ nav a::after {
   content: none;
 }
 
-.slider {
+#slider {
   position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-sizing: border-box;
   height: 600px;
-  padding: 0 39px 6px 40px;
+}
 
+.slide-1 {
+  position: relative;
+  display: none;
+  height: 600px;
   background-image: url(assets/slider-bg.png);
   background-color: #f06c64;
 }
 
 #iPhone-vert {
-  position: relative;
-  right: 5px;
-  bottom: 3px;
+  position: absolute;
+  left: 112px;
+  bottom: 64px;
 }
 
 #vert-screen {
@@ -118,10 +118,14 @@ nav a::after {
   bottom: 95px;
 }
 
+#vert-button:hover {
+  cursor: pointer;
+}
+
 #iPhone-hor {
-  position: relative;
-  left: 6px;
-  bottom: 3px;
+  position: absolute;
+  right: 111px;
+  bottom: 186px;
 }
 
 #hor-screen {
@@ -129,7 +133,7 @@ nav a::after {
   width: 333px;
   height: 188px;
   background: #000000;
-  right: 201.5px;
+  right: 202px;
   bottom: 224px;
 }
 
@@ -142,14 +146,29 @@ nav a::after {
   bottom: 297px;
 }
 
+#hor-button:hover {
+  cursor: pointer;
+}
+
 .invisible {
   display: none;
 }
 
+.slide-2 {
+  position: absolute;
+  display: none;
+  top: 0;
+  left: 0;
+}
+
+.current {
+  display: block;
+}
+
 #arrow-left {
-  position: relative;
-  left: 2px;
-  bottom: 1px;
+  position: absolute;
+  left: 42px;
+  bottom: 289px;
 }
 
 #arrow-left:hover {
@@ -157,13 +176,38 @@ nav a::after {
 }
 
 #arrow-right {
-  position: relative;
-  bottom: 1px;
+  position: absolute;
+  right: 40px;
+  bottom: 289px;
 }
 
 #arrow-right:hover {
   transform: scale(1.2);
 }
+
+#slider .slide {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+  from {
+      opacity: .4
+  }
+  to {
+      opacity: 1
+  }
+}
+@keyframes fade {
+  from {
+      opacity: .4
+  }
+  to {
+      opacity: 1
+  }
+}
+
 
 #services {
   background-image: url(assets/services-bg.png);
