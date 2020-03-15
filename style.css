@@ -63,6 +63,10 @@ nav a:hover {
   color: #f06c64;
 }
 
+#menu .active {
+  color: #f06c64;
+}
+
 nav a::after {
   content: "·";
   padding: 0 9px 0 13px;
@@ -120,7 +124,7 @@ nav a::after {
   transform: scale(1.2);
 }
 
-.services {
+#services {
   background-image: url(assets/services-bg.png);
   height: 500px;
   box-sizing: border-box;
@@ -193,7 +197,7 @@ nav a::after {
   padding-left: 2px;
 }
 
-.portfolio {
+#portfolio {
   height: 869px;
 
   background-image: url(assets/portfolio-bg.png);
@@ -255,7 +259,7 @@ nav a::after {
   row-gap: 20px;
 }
 
-.about {
+#about {
   height: 734px;
 
   background-image: url(assets/about-bg.png);
@@ -335,7 +339,7 @@ nav a::after {
   border-radius: 30px;
 }
 
-.quote {
+#quote {
   height: 654px;
 
   background-image: url(assets/form-bg.png);
