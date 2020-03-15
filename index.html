@@ -176,11 +176,11 @@
               <br>
               <input class="form-field one-line" type="email" name="email" placeholder="Email (Required)" required pattern="[-.\w]+@([\w-]+\.)+\w+">
               <br>
-              <input class="form-field one-line" type="text" name="subject" placeholder="Subject">
+              <input id="subject" class="form-field one-line" type="text" name="subject" placeholder="Subject">
               <br>
-              <textarea class="form-field" name="description" rows="5" cols="30" placeholder="Describe your project in detail..."></textarea>
+              <textarea id="description" class="form-field" name="description" rows="5" cols="30" placeholder="Describe your project in detail..."></textarea>
               <br>
-              <input class="button" type="submit" value="Submit">
+              <input id="btn" class="button" type="submit" value="Submit">
             </form>
             <div class="contacts-container">
               <h3 class="contacts-title">Contact Information</h3>
@@ -193,6 +193,16 @@
                 <a class="info" href="tel:035283318635">03528 331 86 35 </a>
                 <a href="mailto:info@singolo.com"><img class="mail" src="assets/mail-icon.png" alt="mail icon"></a>
                 <a class="info mail" href="mailto:info@singolo.com">info@singolo.com</a>
+              </div>
+            </div>
+            <div id="message-block" class="invisible">
+              <div id="message">
+                <p id="letter-sent">Письмо отправлено</p>
+                <p class="subject">Тема: <span id="subject-result"></span></p>
+                <p class="subject invisible">Без темы</p>
+                <p class="description">Описание: <span id="description-result"></span></p>
+                <p class="description invisible">Без описания</p>
+                <button id="close-btn">OK</button>
               </div>
             </div>
           </div>

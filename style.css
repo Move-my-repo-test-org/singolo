@@ -15,6 +15,9 @@ body {
 }
 
 header {
+  /* position: sticky;
+  top: 0;
+  z-index: 10;  */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -438,6 +441,8 @@ nav a::after {
 
 .quote-container{
   position: relative;
+  height: 654px;
+  box-sizing: border-box;
 
   padding: 59px 40px 0 40px;
 }
@@ -523,6 +528,60 @@ textarea {
 .button:hover {
   background-color: #d6564f;
   color: #f0d8d9;
+}
+
+#message-block {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba(45, 48, 58, 0.5);
+}
+
+#message {
+  position: absolute;
+  width: 400px;
+  height: 200px;
+  box-sizing: border-box;
+  top: calc(50% - 100px);
+  left: calc(50% - 200px);
+  padding: 25px 30px;
+  
+  background: rgba(45, 48, 58, 0.9);
+  border: 3px solid rgb(45, 48, 58);
+  border-radius: 5px;
+  
+  font-size: 18px;
+  color: #f0d8d9;
+}
+
+#letter-sent {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.subject {
+  max-height: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-bottom: 5px;
+}
+
+.description {
+  max-height: 70px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#close-btn {
+  position: absolute;
+  width: 60px;
+  height: 20px;
+  left: calc(50% - 30px);
+  bottom: 10px;
+
+  font-size: 11px;
 }
 
 .contacts-container {

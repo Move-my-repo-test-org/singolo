@@ -6,7 +6,9 @@ const HOR_SCR = document.getElementById('hor-screen');
 const SLIDER = document.getElementById('slider');
 const LEFT_ARROW = document.getElementById('arrow-left');
 const RIGHT_ARROW = document.getElementById('arrow-right');
-const IMAGES = document.getElementById('images-block')
+const IMAGES = document.getElementById('images-block');
+const BUTTON = document.getElementById('btn');
+const CLOSE_BUTTON = document.getElementById('close-btn');
 
 MENU.addEventListener('click', (event) => {
   MENU.querySelectorAll('a').forEach(el => el.classList.remove('active'));
@@ -48,3 +50,35 @@ IMAGES.addEventListener('click', (event) => {
   IMAGES.querySelectorAll('img').forEach(el => el.classList.remove('selected'));
   event.target.classList.add('selected');
 });
+
+BUTTON.addEventListener('click', (event) => {
+  BUTTON.removeAttribute('type');
+  BUTTON.setAttribute('type', 'button');
+  document.getElementById('message-block').classList.remove('invisible');
+  if (document.getElementById('subject').value.toString() == '') {
+    document.querySelectorAll('.subject').forEach(el => el.classList.toggle('invisible'));
+  } else {
+    const subject = document.getElementById('subject').value.toString();
+    document.getElementById('subject-result').innerText = subject;
+  }
+  if (document.getElementById('description').value.toString() == '') {
+    document.querySelectorAll('.description').forEach(el => el.classList.toggle('invisible'));
+  } else {
+    const description = document.getElementById('description').value.toString();
+    document.getElementById('description-result').innerText = description;
+  }
+})
+
+CLOSE_BUTTON.addEventListener('click', (event) => {
+  document.getElementById('message-block').classList.add('invisible');
+  if (document.getElementById('subject').value.toString() == '') {
+    document.querySelectorAll('.subject').forEach(el => el.classList.toggle('invisible'));
+  } else {
+    document.getElementById('subject-result').innerText = '';
+  }
+  if (document.getElementById('description').value.toString() == '') {
+    document.querySelectorAll('.description').forEach(el => el.classList.toggle('invisible'));
+  } else {
+    document.getElementById('description-result').innerText = '';
+  }
+})
