@@ -6,6 +6,7 @@ const HOR_SCR = document.getElementById('hor-screen');
 const SLIDER = document.getElementById('slider');
 const LEFT_ARROW = document.getElementById('arrow-left');
 const RIGHT_ARROW = document.getElementById('arrow-right');
+const IMAGES = document.getElementById('images-block')
 
 MENU.addEventListener('click', (event) => {
   MENU.querySelectorAll('a').forEach(el => el.classList.remove('active'));
@@ -41,4 +42,9 @@ RIGHT_ARROW.addEventListener('click', (event) => {
     currentSlideNumber = currentSlideNumber + 1;
   }
   slides[currentSlideNumber].classList.add('current');
+});
+
+IMAGES.addEventListener('click', (event) => {
+  IMAGES.querySelectorAll('img').forEach(el => el.classList.remove('selected'));
+  event.target.classList.add('selected');
 });

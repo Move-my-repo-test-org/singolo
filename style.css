@@ -335,13 +335,18 @@ nav a::after {
   border: 1px solid #ffffff;
 }
 
-.images-block {
+#images-block {
   display: grid;
   height: 601px;
   overflow: hidden;
   grid-template: repeat(3, 187px)/repeat(4, 220px);
   justify-content: space-between;
   row-gap: 20px;
+}
+
+.selected {
+  box-sizing: border-box;
+  border: 5px solid #f06c64;
 }
 
 #about {
