@@ -82,6 +82,7 @@ nav a::after {
 }
 
 .slider {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -99,10 +100,50 @@ nav a::after {
   bottom: 3px;
 }
 
+#vert-screen {
+  position: absolute;
+  width: 188px;
+  height: 333px;
+  background: #000000;
+  left: 126px;
+  bottom: 149px;
+}
+
+#vert-button {
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  background: rgba(255, 255, 255, 0);
+  left: 197px;
+  bottom: 95px;
+}
+
 #iPhone-hor {
   position: relative;
   left: 6px;
   bottom: 3px;
+}
+
+#hor-screen {
+  position: absolute;
+  width: 333px;
+  height: 188px;
+  background: #000000;
+  right: 201.5px;
+  bottom: 224px;
+}
+
+#hor-button {
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  background: rgba(255, 255, 255, 0);
+  right: 545px;
+  bottom: 297px;
+}
+
+.invisible {
+  display: none;
 }
 
 #arrow-left {
