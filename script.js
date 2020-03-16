@@ -6,6 +6,7 @@ const HOR_SCR = document.getElementById('hor-screen');
 const SLIDER = document.getElementById('slider');
 const LEFT_ARROW = document.getElementById('arrow-left');
 const RIGHT_ARROW = document.getElementById('arrow-right');
+const PORTFOLIO_BUTTONS = document.getElementById('buttons');
 const IMAGES = document.getElementById('images-block');
 const BUTTON = document.getElementById('btn');
 const CLOSE_BUTTON = document.getElementById('close-btn');
@@ -46,26 +47,48 @@ RIGHT_ARROW.addEventListener('click', (event) => {
   slides[currentSlideNumber].classList.add('current');
 });
 
+PORTFOLIO_BUTTONS.addEventListener('click', (event) => {
+  if (event.target !== PORTFOLIO_BUTTONS) {
+    PORTFOLIO_BUTTONS.querySelectorAll('button').forEach(el => el.classList.remove('active'));
+    event.target.classList.add('active');
+    mixImages();
+  }
+  
+})
+
 IMAGES.addEventListener('click', (event) => {
-  IMAGES.querySelectorAll('img').forEach(el => el.classList.remove('selected'));
-  event.target.classList.add('selected');
+  IMAGES.querySelectorAll('.portfolio-image').forEach(el => el.classList.remove('selected'));
+  if (event.target !== IMAGES){
+    event.target.classList.add('selected');
+  }
 });
 
 BUTTON.addEventListener('click', (event) => {
-  BUTTON.removeAttribute('type');
-  BUTTON.setAttribute('type', 'button');
-  document.getElementById('message-block').classList.remove('invisible');
-  if (document.getElementById('subject').value.toString() == '') {
-    document.querySelectorAll('.subject').forEach(el => el.classList.toggle('invisible'));
-  } else {
-    const subject = document.getElementById('subject').value.toString();
-    document.getElementById('subject-result').innerText = subject;
+  let inputs = document.querySelector('form').querySelectorAll('input');
+  let empty = false;
+  for (let el of inputs) {
+    if (el.hasAttribute('required')) {
+      if (el.value.toString() == '') {
+        empty = true;
+      }
+    }
   }
-  if (document.getElementById('description').value.toString() == '') {
-    document.querySelectorAll('.description').forEach(el => el.classList.toggle('invisible'));
-  } else {
-    const description = document.getElementById('description').value.toString();
-    document.getElementById('description-result').innerText = description;
+  if (empty == false) {
+    BUTTON.removeAttribute('type');
+    BUTTON.setAttribute('type', 'button');
+    document.getElementById('message-block').classList.remove('invisible');
+    if (document.getElementById('subject').value.toString() == '') {
+      document.querySelectorAll('.subject').forEach(el => el.classList.toggle('invisible'));
+    } else {
+      const subject = document.getElementById('subject').value.toString();
+      document.getElementById('subject-result').innerText = subject;
+    }
+    if (document.getElementById('description').value.toString() == '') {
+      document.querySelectorAll('.description').forEach(el => el.classList.toggle('invisible'));
+    } else {
+      const description = document.getElementById('description').value.toString();
+      document.getElementById('description-result').innerText = description;
+    }
   }
 })
 
@@ -82,3 +105,29 @@ CLOSE_BUTTON.addEventListener('click', (event) => {
     document.getElementById('description-result').innerText = '';
   }
 })
+
+function mixImages() {
+  let arr = [];
+  if (IMAGES.querySelector('img').getAttribute('src') == 'assets/portfolio-1.png') {
+    IMAGES.querySelectorAll('img').forEach(el => el.removeAttribute('src'));
+    IMAGES.querySelectorAll('img').forEach(function(el) {
+      let num = 12;
+      while (arr.includes(num)) {
+      num = Math.floor(Math.random() * 12 + 1);
+      }
+      arr.push(num);
+      el.setAttribute('src', `assets/portfolio-${num}.png`);
+    });
+  } else {
+    IMAGES.querySelectorAll('img').forEach(el => el.removeAttribute('src'));
+    IMAGES.querySelectorAll('img').forEach(function(el) {
+      let num = 1;
+      while (arr.includes(num)) {
+      num = Math.floor(Math.random() * 12 + 1);
+      }
+      arr.push(num);
+      el.setAttribute('src', `assets/portfolio-${num}.png`);
+    });
+  }
+  
+}

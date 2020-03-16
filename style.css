@@ -15,9 +15,9 @@ body {
 }
 
 header {
-  /* position: sticky;
+  position: sticky;
   top: 0;
-  z-index: 10;  */
+  z-index: 10; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -336,6 +336,12 @@ nav a::after {
 .portfolio-button:hover {
   color: #ffffff;
   border: 1px solid #ffffff;
+}
+
+.portfolio-button.active {
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  outline: none;
 }
 
 #images-block {
