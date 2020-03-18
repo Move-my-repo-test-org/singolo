@@ -16,6 +16,23 @@ MENU.addEventListener('click', (event) => {
   event.target.classList.add('active');
 });
 
+document.addEventListener('scroll', function (event) {
+  const currentPos = window.scrollY;
+  const sections = document.querySelectorAll('main>section');
+
+  sections.forEach((el) => {
+    if (el.offsetTop <= currentPos && (el.offsetTop + el.offsetHeight) > currentPos) {
+      MENU.querySelectorAll('a').forEach((a) => {
+        a.classList.remove('active');
+        if (el.getAttribute('id') === a.getAttribute('href').substring(1)) {
+          a.classList.add('active');
+        }
+      });
+    } 
+  });
+
+});
+
 VERT_BTN.addEventListener('click', (event) => {
   VERT_SCR.classList.toggle('invisible');
 });
