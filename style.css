@@ -91,10 +91,23 @@ nav a::after {
 #slider {
   position: relative;
   height: 695px;
+  overflow: hidden;
 }
 
 .for-header {
   height: 95px;
+}
+
+.slider-container{
+  display: inline;
+  height: 600px;
+  transition: transform 0.6s ease;
+}
+
+.slide {
+  /* flex: 100% 0; */
+  max-width: 100%;
+  animation: 0.5s ease-in-out;
 }
 
 .slide-1 {
@@ -196,7 +209,61 @@ nav a::after {
   transform: scale(1.2);
 }
 
-#slider .slide {
+.slide.right-in {
+  animation-name: right-in;
+}
+
+.slide.left-in {
+  animation-name: left-in;
+}
+
+.slide.right-out {
+  animation-name: right-out;
+}
+
+.slide.left-out {
+  animation-name: left-out;
+}
+
+
+@keyframes right-in {
+  from {
+    right: -100%;
+  }
+  to {
+    right: 0;
+  }
+}
+
+@keyframes left-in {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@keyframes right-out {
+  from {
+    right: 0;
+  }
+  to {
+    right: -100%;
+  }
+}
+
+@keyframes left-out {
+  from {
+    left: 0;
+  }
+  to {
+    left: -100%;
+  }
+}
+
+
+/* #slider .slide {
   -webkit-animation-name: fade;
   -webkit-animation-duration: 1.5s;
   animation-name: fade;
@@ -218,7 +285,7 @@ nav a::after {
       opacity: 1
   }
 }
-
+ */
 
 #services {
   background-image: url(assets/services-bg.png);
