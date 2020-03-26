@@ -819,4 +819,103 @@ footer {
     width: auto;
   }
 
+  #portfolio {
+    width: 100vw;
+    height: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+  }
+  
+  .portfolio-container {
+    height: auto;
+    padding: 59px 40px 75px 40px;
+  } 
+  
+  #images-block {
+    height: calc(95.7vw + 60px);
+    grid-template: repeat(4, 1fr) / repeat(3, 1fr);
+    justify-content: unset;
+    column-gap: 20px;
+    row-gap: 20px;
+  }
+
+  #images-block img::before {
+    content: '';
+    float: left;
+    padding-top: 100%;
+  }
+
+  #images-block img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  #about {
+    width: 100vw;
+    height: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .about-container {
+    height: auto;
+    padding: 60px 40px 75px 40px;
+  }
+  
+  .about-card {
+    width: 28.5vw;
+    min-width: 219px;
+  }
+
+  .profile-photo {
+    width: 100%;
+    height: auto;
+  }
+  
+  .profile-description {
+    height: 72px;
+  }
+
+  .social {
+    height: 32px;
+    margin-top: 0;
+  }
+
+  #quote {
+    width: 100vw;
+    height: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .quote-container {
+    height: auto;
+    padding: 53px 40px 45px 40px;
+  }
+  
+  .form-contacts-container {
+    margin-top: 20px;
+  }
+  
+  .form-field {
+    width: 57.5vw;
+    min-width: 442px;
+    margin-bottom: 12px;
+  }
+  
+  textarea {
+    height: 159px;
+  }
+  
+  .contacts-container {
+    width: 28.7vw;
+  }
+  
+  #location-icon {
+    display: block;
+    width: 8px;
+    height: auto;
+  }
+
 }
