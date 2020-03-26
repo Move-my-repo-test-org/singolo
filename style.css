@@ -13,7 +13,8 @@ body {
 }
 
 .wrapper {
-  width: 1020px;
+  width: 100%;
+  max-width: 1020px;
 
   font-family: 'Lato', sans-serif;
 }
@@ -25,6 +26,8 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100vw;
+  max-width: 1020px;
   height: 95px;
 
   background-image: url(assets/header-bg.png);
@@ -38,7 +41,7 @@ header {
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
-  width: 1020px;
+  width: 100%;
   padding: 0 39px 0 40px;
 
   color: #ffffff;
@@ -90,6 +93,9 @@ nav a::after {
 
 #slider {
   position: relative;
+  width: 100vw;
+  max-width: 1020px;
+  /* height: auto; */
   height: 695px;
   overflow: hidden;
 }
@@ -100,21 +106,19 @@ nav a::after {
 
 .slider-container{
   display: inline;
-  width: 100%;
-  height: 600px;
   transition: transform 0.6s ease;
 }
 
 .slide {
   width: auto;
   max-width: 100%;
+  height: 600px;
   animation: 0.7s ease-in-out;
 }
 
 .slide-1 {
   position: relative;
   display: none;
-  height: 600px;
   background-image: url(assets/slider-bg.png);
   background-color: #f06c64;
 }
@@ -192,7 +196,7 @@ nav a::after {
 
 #arrow-left {
   position: absolute;
-  left: 42px;
+  left: 40px;
   bottom: 289px;
 }
 
@@ -262,31 +266,6 @@ nav a::after {
     left: -100%;
   }
 }
-
-
-/* #slider .slide {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-@-webkit-keyframes fade {
-  from {
-      opacity: .4
-  }
-  to {
-      opacity: 1
-  }
-}
-@keyframes fade {
-  from {
-      opacity: .4
-  }
-  to {
-      opacity: 1
-  }
-}
- */
 
 #services {
   background-image: url(assets/services-bg.png);
@@ -395,7 +374,6 @@ nav a::after {
   font-size: 11.5px;
   line-height: 20px;
   letter-spacing: -0.012em;
-  /* font-stretch: semi-condensed; */
   word-spacing: -0.012em;
   color: #767e9e;
   background: none;
@@ -741,4 +719,104 @@ footer {
   width: 152px;
   justify-content: space-between;
   margin-top: 2px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1020px) {
+  .wrapper {
+    overflow: hidden;
+  }
+  
+  #slider {
+    height: calc(59vw + 95px);
+    min-height: 547px;
+  }
+  .slide {
+    height: 59vw;
+    min-height: 452px;
+  }
+  #iPhone-vert {
+    width: 24vw;
+    min-width: 180.85px;
+    height: auto;
+    left: 11vw;
+    bottom: 6vw;
+  }
+  
+  #vert-screen {
+    width: 19vw;
+    height: 33.5vw;
+    left: 12.3vw;
+    bottom: 14.4vw;
+  }
+  
+  #vert-button {
+    width: 4.4vw;
+    height: 4.4vw;
+    left: 19.5vw;
+    bottom: 9.5vw;
+  }
+  
+  #iPhone-hor {
+    height: 24vw;
+    min-height: 180.85px;
+    width: auto;
+    right: 11vw;
+    bottom: 18vw;
+  }
+  
+  #hor-screen {
+    width: 33.5vw;
+    height: 19vw;
+    right: 20vw;
+    bottom: 21.7vw;
+  }
+  
+  #hor-button {
+    width: 4.4vw;
+    height: 4.4vw;
+    right: 54vw;
+    bottom: 29vw;
+  }
+
+  .slide-2 img{
+    width: 100vw;
+    height: auto;
+  }
+  
+  #arrow-left {
+    bottom: calc(29.5vw - 13px);
+  }
+
+  #arrow-right {
+    bottom: calc(29.5vw - 13px);
+  }
+
+  #services {
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: auto;
+    padding: 40px 40px 64px 40px;
+  }
+
+  .cards-block {
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: unset;
+    column-gap: 54px;
+    row-gap: 40px;
+    padding-top: 40px;
+    padding-left: 0;
+  }
+  
+  .services-card {
+    height: auto;
+    max-height: 13.5vw;
+    justify-content: unset;
+  }
+  
+  .card-text {
+    width: auto;
+  }
+
 }
