@@ -1,5 +1,7 @@
 const MENU = document.getElementById('menu');
-const BURGER = document.querySelector('header::before')
+const MENU_CONTAINER = document.querySelector('.menu-container')
+const BURGER = document.getElementById('burger');
+const HEADER = document.querySelector('.header-container');
 const VERT_BTN = document.getElementById('vert-button');
 const VERT_SCR = document.getElementById('vert-screen');
 const HOR_BTN = document.getElementById('hor-button');
@@ -33,6 +35,36 @@ document.addEventListener('scroll', function (event) {
     } 
   });
 
+});
+
+BURGER.addEventListener('click', (event) => {
+  if (!HEADER.classList.contains('open')) {
+    HEADER.classList.add('open');
+    BURGER.classList.add('opening');
+    BURGER.addEventListener('animationend', function() { 
+      this.classList.remove('opening');
+      this.classList.add('vert');
+    });
+    MENU.classList.add('slide-in');
+    MENU.addEventListener('animationend', function() { 
+      this.classList.remove('slide-in');
+      HEADER.classList.remove('open');
+      HEADER.classList.add('open');
+    });
+  } else {
+    
+    BURGER.classList.add('close');
+    BURGER.addEventListener('animationend', function() { 
+      this.classList.remove('close');
+      this.classList.remove('vert');
+    });
+    MENU.classList.add('slide-out');
+    MENU.addEventListener('animationend', function() { 
+      this.classList.remove('slide-out');
+      HEADER.classList.remove('open');
+    });
+    
+  }
 });
 
 VERT_BTN.addEventListener('click', (event) => {

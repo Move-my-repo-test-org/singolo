@@ -47,6 +47,10 @@ header {
   color: #ffffff;
 }
 
+#burger {
+  display: none;
+}
+
 h1 {
   position: relative;
   bottom: 4px;
@@ -942,6 +946,14 @@ footer {
   #menu {
     display: none;
   }
+
+  #burger {
+    display: block;
+  }
+
+  #burger:hover {
+    cursor: pointer;
+  }
   
   .open.header-container {
     justify-content: start;
@@ -972,6 +984,7 @@ footer {
     position: absolute;
     display: flex;
     flex-direction: column;
+    box-sizing: border-box;
     width: 278px;
     height: 100vh;
     padding-top: 232px;
@@ -988,25 +1001,88 @@ footer {
     font-size: 24px;
     padding-bottom: 27px;
   }
-  
-  nav a:hover {
-    color: #f06c64;
-  }
-  
-  #menu .active {
-    color: #f06c64;
-  }
-  
+
   nav a::after {
-    content: "";
-    padding: 0;
+    content: '';
+  }
+
+  /* .menu-container {
+    animation: 0.5s ease-in-out;
+  }
+
+  .menu-container.slide-in {
+    animation-name: slide-in;
+  }
+
+  .menu-container.slide-out {
+    animation-name: slide-out;
+  } */
+
+  #menu {
+    animation: 0.5s ease-in-out;
+  }
+
+  #menu.slide-in {
+    animation-name: slide-in;
+  }
+
+  #menu.slide-out {
+    animation-name: slide-out;
   }
   
-  #last-item {
-    padding-right: 0;
-  }
   
-  #last-item::after {
-    content: none;
+  @keyframes slide-in {
+    from {
+      left: -100%;
+    }
+    to {
+      left: 0;
+    }
   }
+
+  @keyframes slide-out {
+    from {
+      left: 0;
+    }
+    to {
+      left: -100%;
+    }
+  }
+
+  #burger {
+    animation: 0.5s ease-in-out;
+  }
+
+  #burger.vert {
+    transform: rotate(90deg);
+  }
+
+  #burger.opening {
+    animation-name: opening;
+  }
+
+  #burger.close {
+    animation-name: close;
+  }
+
+  @keyframes opening {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(90deg);
+    }
+  }
+
+  @keyframes close {
+    from {
+      transform: rotate(90deg);
+    }
+    to {
+      transform: rotate(0deg);
+    }
+  }
+
+  
+  
 }
