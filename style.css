@@ -919,3 +919,94 @@ footer {
   }
 
 }
+
+@media only screen and (min-width: 375px) and (max-width: 768px) {
+  header {
+    height: 71px;
+  }
+  
+  .header-container {
+   padding-left: 20px;
+  }
+
+  
+  
+  h1 {
+    position: relative;
+  
+    font-size: 19.69px;
+    letter-spacing: -3%;
+    bottom: 0;
+  }
+
+  #menu {
+    display: none;
+  }
+  
+  .open.header-container {
+    justify-content: start;
+  }
+
+  .open #burger {
+    position: relative;
+    z-index: 5;
+  }
+
+  .open h1 {
+    padding-left: 28.5px;
+    z-index: 5;
+  }
+
+  .open .menu-container {
+    position: fixed;
+    display: block;
+   
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgba(45, 48, 58, 0.6);
+  }
+
+  .open #menu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 278px;
+    height: 100vh;
+    padding-top: 232px;
+    padding-left: 71px;
+    top: 0;
+    left: 0;
+    background: #2D303A;
+    font-size: 24px;
+    letter-spacing: -3.5%;
+    color: #f0d8d9;
+  }
+  
+  .open nav a {
+    font-size: 24px;
+    padding-bottom: 27px;
+  }
+  
+  nav a:hover {
+    color: #f06c64;
+  }
+  
+  #menu .active {
+    color: #f06c64;
+  }
+  
+  nav a::after {
+    content: "";
+    padding: 0;
+  }
+  
+  #last-item {
+    padding-right: 0;
+  }
+  
+  #last-item::after {
+    content: none;
+  }
+}

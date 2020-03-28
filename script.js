@@ -1,4 +1,5 @@
 const MENU = document.getElementById('menu');
+const BURGER = document.querySelector('header::before')
 const VERT_BTN = document.getElementById('vert-button');
 const VERT_SCR = document.getElementById('vert-screen');
 const HOR_BTN = document.getElementById('hor-button');
