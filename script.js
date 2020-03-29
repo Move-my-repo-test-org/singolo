@@ -18,6 +18,19 @@ const CLOSE_BUTTON = document.getElementById('close-btn');
 MENU.addEventListener('click', (event) => {
   MENU.querySelectorAll('a').forEach(el => el.classList.remove('active'));
   event.target.classList.add('active');
+	
+  if (HEADER.classList.contains('open')) {
+    BURGER.classList.add('close');
+    BURGER.addEventListener('animationend', function() { 
+      this.classList.remove('close');
+      this.classList.remove('vert');
+    });
+    MENU.classList.add('slide-out');
+    MENU.addEventListener('animationend', function() { 
+      this.classList.remove('slide-out');
+      HEADER.classList.remove('open');
+    });
+  }
 });
 
 document.addEventListener('scroll', function (event) {
