@@ -1189,7 +1189,7 @@ footer {
   
   .portfolio-container {
     height: auto;
-    padding: 40px 30px 12px 30px;
+    padding: 40px 30px 42px 30px;
   } 
   
   #images-block {
@@ -1208,7 +1208,7 @@ footer {
 
   #images-block img {
     width: 100%;
-    height: 100%;
+    height: auto;
   }
   
   #about {
@@ -1315,5 +1315,9 @@ footer {
     font-size: 11px;
     margin: 11px 3px 19px 0;
     padding: 0px 4px;
+  }
+
+  #images-block {
+    height: calc(135vw + 42px);
   }
 }
