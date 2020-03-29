@@ -1171,6 +1171,11 @@ footer {
     justify-content: unset;
   }
   
+  .card-icon {
+    width: 59px; 
+    height: auto;
+  }
+
   .card-text {
     width: auto;
   }
