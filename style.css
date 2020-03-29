@@ -923,7 +923,7 @@ footer {
 
 }
 
-@media only screen and (min-width: 375px) and (max-width: 768px) {
+@media only screen and (min-width: 320px) and (max-width: 768px) {
   
   .wrapper {
     overflow: hidden;
@@ -1206,5 +1206,109 @@ footer {
     height: 100%;
   }
   
+  #about {
+    width: 100vw;
+    height: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
   
+  .about-container {
+    height: auto;
+    padding: 35px 30px 45px 30px;
+  }
+  
+  .about-cards-block {
+    display: block;
+    margin-top: 0px;
+  }
+
+  .about-card {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 30px;
+  }
+
+  .profile-photo {
+    width: 100%;
+    height: auto;
+  }
+  
+  .profile-description {
+    line-height: 22px;
+  }
+
+  .social {
+    height: 32px;
+    margin-top: 12px;
+  }
+
+  #quote {
+    width: 100vw;
+    height: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .quote-container {
+    height: auto;
+    padding: 44px 30px 42px 30px;
+  }
+  
+  .form-contacts-container {
+    display: block;
+    margin-top: 20px;
+  }
+  
+  .form-field {
+    width: 100%;
+    margin-bottom: 12px;
+  }
+  
+  textarea {
+    height: 159px;
+  }
+
+  .button {
+    font-size: 14px;
+    height: 50px;
+    width: 100%;
+  }
+  
+  .contacts-container {
+    width: 100%;
+    margin-top: 32px;
+  }
+  
+  .contacts-description {
+    font-weight: 300;
+    margin-bottom: 20px;
+  }
+
+  #location-icon {
+    display: block;
+    width: 8px;
+    height: auto;
+  }
+
+  .info {
+    font-weight: 300;
+  }
+
+  .footer-container {
+    justify-content: center;
+  }
+
+  .copyright {
+    display: none;
+  }
+  
+}
+
+@media only screen and (min-width: 320px) and (max-width: 375px) {
+  .portfolio-button {
+    font-size: 11px;
+    margin: 11px 3px 19px 0;
+    padding: 0px 4px;
+  }
 }
